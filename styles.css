@@ -1,0 +1,86 @@
+body{
+  background-color: #111;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+.contenedor{
+  background-color: #000;
+  border-radius: 16px;
+  padding: 30px;
+  width: 400px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.inputs{
+  display: flex;
+}
+.inputs input{
+  border-color: transparent;
+  font-size: 18px;
+  padding: 7px 5px;
+}
+#inputParaMostrarOperacion{
+  border-right: 1px solid #aaa;
+  border-radius: 12px 0 0 12px;
+  color: #000;
+  width: 70%;
+}
+.inputs input:disabled{
+  background-color: white;
+}
+#inputParaMostrarResultado{
+  border-radius: 0 12px 12px 0;
+  width: 30%;
+}
+.numeros{
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: repeat(4, 60px);
+  grid-template-areas: 
+    ". . ."
+    ". . ."
+    ". . ."
+    "zero zero zero"
+  ;
+  gap: 10px;
+}
+button{
+  background-color: #333;
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: transparent;
+  color: white;
+  font-weight: 600;
+  width: 60px;
+  height: 60px;
+}
+button:hover{
+  border-color: #aaa;
+}
+button:active{
+  border-color: #eee;
+}
+#zero{
+  grid-area: zero;
+  width: 100%;
+}
+.operaciones{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.botonesEspeciales{
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 60px 200px;
+  gap: 20px;
+}
+#botonResultado{
+  width: 100%;
+}
