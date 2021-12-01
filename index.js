@@ -22,6 +22,10 @@ function operate(a,b, operador){
     return multiplicacion(a,b)
   }
   else{
+    if(b === 0){
+      alert('No se puede dividir entre 0')
+      return 0
+    }
     return division(a,b)
   }
 }
@@ -46,8 +50,8 @@ let numeroAnterior = 0
 let operador = ""
 let resultado = 0
 function ejecutarOperacion(){
-  let numeroIngresado = parseInt(input.value) 
-  resultado = operate(numeroAnterior, numeroIngresado, operador)
+  let numeroIngresado = parseFloat(input.value) 
+  resultado = operate(numeroAnterior, numeroIngresado, operador).toFixed(2)
   numeroAnterior = resultado
   inputParaMostrarResultado.value = "= "+resultado
 }
@@ -57,7 +61,7 @@ function agregarOperadorALaOperacion (event, operadorPresionado){
     ejecutarOperacion()
   }
   else{
-    numeroAnterior = parseInt(input.value)
+    numeroAnterior = parseFloat(input.value)
     resultado = numeroAnterior
   }
   operador = operadorPresionado

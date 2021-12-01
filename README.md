@@ -1,2 +1,2 @@
 # Calculadora
-Una calculador con javascript vanilla
+Una calculador con vanilla javascript para mejorar la habilidad del manejo del DOM.
